@@ -3,7 +3,7 @@ Questo progetto realizzato con il framework Vue, permette di visualizzare i meta
 
 ## Struttura ##
 Il progetto è diviso in 4 file:
-- __index.html__: rappresenta la vista principale dell'applicazione.
+- __index.html__: definisce la vista e la struttura principale dell'applicazione.
 - __model_controller__: definisce le operazioni eseguibili dall'utente, la logica e i dati necessari all'applicazione.
 - __exif_property__: specifica la vista di un singolo metadato EXIF e le operazioni necessarie.
 - __style.css__: definisce l'aspetto grafico.
