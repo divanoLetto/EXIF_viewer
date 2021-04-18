@@ -13,4 +13,4 @@ L'applicazione utilizza le librerie di [*Exif.js*](https://github.com/exif-js/ex
 
 ## Esecuzione ##
 Per l'esecuzione sono sufficienti i file *.html*, *.javascript* e *.css* contenuti nel repository e un brower (es. Google Chrome).
-L'applicazione è disponibile anche al link: *http://lorenzomwebsite.altervista.org/HCI/index.html*.
+L'applicazione è disponibile anche al link: *http://lorenzomwebsite.altervista.org/HCI/view.html*.
