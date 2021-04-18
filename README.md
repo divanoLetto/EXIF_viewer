@@ -7,7 +7,7 @@ Il progetto è diviso in 4 file principali:
 - __model__: tiene traccia del file immagine e dei suoi metadati necessari all'applicazione. 
 - __exif_property__: specifica la vista di un singolo metadato EXIF. Consente di prendere in ingresso un dizionario di proprietà, contenente i metadati dell'immagine, e realizza una vista che tiene conto del fatto che gli elementi possono essere stati codificati in modo gerarchico.
 - __navbar_controller__: definisce e implementa le funzioni eseguibili dall'utente ovvero l'upload e la ruotazione oraria e antioraria. 
-- __drag_drop__: consente l'upload di immagine tramite l'azione di drag and drop e un feedback visivo relativo a questa azione. 
+- __drag_drop__: consente l'upload di immagine tramite l'azione di _drag and drop_ e fornisce un feedback visivo relativo a questa azione. 
 
 L'applicazione utilizza le librerie di [*Exif.js*](https://github.com/exif-js/exif-js "Exif.js") per l'estrazione dei metadati e [*JavaScript Load Image*](https://github.com/blueimp/JavaScript-Load-Image "Load Image") per la gestione delle immagini.
 
