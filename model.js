@@ -65,7 +65,9 @@ var app = new Vue({
               all_data["GPS Data"] = exif_data_GPS;
             }
             vm.exifs = all_data; // set EXIF and GPS data
-            vm.add_gps_location();
+            if (vm.exifs["GPS Data"]!= undefined && vm.exifs["GPS Data"]!= undefined){
+              vm.add_gps_location();  // add the GPS location property (GoogleMap)
+            }
           })
         }
       }else{
