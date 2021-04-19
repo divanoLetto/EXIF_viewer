@@ -15,7 +15,10 @@ Vue.component('exif-property', {
       <div class="card-body">
         <ul class="list-group p-0">
           <li v-for="(subitem, subname) in item" class="list-group-item">
-            <div v-if="!has_nested_property(subitem)"> <b>{{subname}}</b>: {{subitem}}</div>
+            <div v-if="!has_nested_property(subitem)">
+              <b>{{subname}}</b>: <div v-if="subname!='Coordinate'" class=inline>{{subitem}}</div>
+                                  <a v-else class=inline :href="subitem" target="_blank"> GoogleMaps </a>
+            </div>
             <div v-else>
               <b>{{subname}}:</b>
               <ul class="list-group p-0 mt-2">
