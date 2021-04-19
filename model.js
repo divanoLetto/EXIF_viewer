@@ -15,20 +15,19 @@ var app = new Vue({
         return dd;
     },
     add_gps_location(exif_data){
+      // Calculate latitude decimal
       var gps_data = this.exifs["GPS Data"];
       var latDegree = gps_data["GPSLatitude"][0];
       var latMinute = gps_data["GPSLatitude"][1];
       var latSecond = gps_data["GPSLatitude"][2];
       var latDirection = gps_data["GPSLatitudeRef"];
       var latFinal = this.convertDMStoDD(latDegree, latMinute, latSecond, latDirection);
-      console.log(latFinal);
       // Calculate longitude decimal
       var lonDegree = gps_data["GPSLongitude"][0];
       var lonMinute = gps_data["GPSLongitude"][1];
       var lonSecond = gps_data["GPSLongitude"][2];
       var lonDirection = gps_data["GPSLongitudeRef"];
       var lonFinal = this.convertDMStoDD(lonDegree, lonMinute, lonSecond, lonDirection);
-      console.log(lonFinal);
       link = "https://www.google.com/maps/search/?api=1&query="+latFinal+","+lonFinal;
       this.exifs["GPS Data"]["Coordinate"] = link;
     },
