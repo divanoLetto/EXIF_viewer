@@ -1,5 +1,5 @@
 # EXIF Viewer 
-Questo progetto realizzato con il framework *Vue*, permette di visualizzare i metadata EXIF e di geolocalizzazione contenuti nelle immagini come indicato nell'assegnamento *imageEXIFViewer.pdf*. 
+Questo progetto realizzato con il framework *Vue*, permette di visualizzare i metadata EXIF e di geolocalizzazione contenuti nelle immagini seguendo le linee guida indicate nell'assegnamento *imageEXIFViewer.pdf*. 
 
 ## Struttura ##
 Il progetto è diviso in 5 file principali:
