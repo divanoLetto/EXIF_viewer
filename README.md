@@ -1,9 +1,9 @@
 # EXIF Viewer 
-Questo progetto realizzato con il framework Vue, permette di visualizzare i metadata EXIF e di geolocalizzazione contenuti nelle immagini come indicato nell'assegnamento *imageEXIFViewer.pdf*. 
+Questo progetto realizzato con il framework *Vue*, permette di visualizzare i metadata EXIF e di geolocalizzazione contenuti nelle immagini come indicato nell'assegnamento *imageEXIFViewer.pdf*. 
 
 ## Struttura ##
-Il progetto è diviso in 4 file principali:
-- __view.html__: definisce la vista e la struttura principale dell'applicazione.
+Il progetto è diviso in 5 file principali:
+- __view__: definisce la vista e la struttura principale dell'applicazione.
 - __model__: tiene traccia del file immagine e dei suoi metadati necessari all'applicazione. 
 - __exif_property__: specifica la vista di un singolo metadato EXIF. Consente di prendere in ingresso un dizionario di proprietà, contenente i metadati dell'immagine, e realizza una vista che tiene conto del fatto che gli elementi possono essere stati codificati in modo gerarchico.
 - __navbar_controller__: definisce e implementa le funzioni eseguibili dall'utente ovvero l'upload e la ruotazione oraria e antioraria. 
