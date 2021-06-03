@@ -1,4 +1,5 @@
 Vue.component('menu-navbar', {
+  // The template is taken from a standard boostrap navbar 
   template:
     `<div class="navbarcontainer">
       <input type="file" ref="inputNavbar" @change="click_input" hidden>
@@ -57,7 +58,7 @@ Vue.component('menu-navbar', {
             if (this.$parent.imageURL != null){
               if (e.key === "a" && (e.ctrlKey || e.metaKey)) {
                   this.rotate_left();
-              }else if (e.key === "s" && (e.ctrlKey || e.metaKey)) {                  
+              }else if (e.key === "s" && (e.ctrlKey || e.metaKey)) {
                   this.rotate_right();
               }
             }
