@@ -1,7 +1,7 @@
 var header_id = 0;
 
 Vue.component('exif-property', {
-   // the template html for each exif properties
+   // the template html for each exif property
   template:
   `<div class="card" :id="set_item_id" style=width:100% >
     <div class="card-header" :id="set_header_id">
