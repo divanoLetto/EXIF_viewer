@@ -53,7 +53,8 @@ Vue.component('exif-property', {
       },
    },
    methods: {
-     has_nested_property(item){ // function that checks if exif property has nested attributes
+     // function that checks if exif property has nested attributes
+     has_nested_property(item){
        if (item.constructor != Object) { // if is not a dictionary
           return false;
        }else {
