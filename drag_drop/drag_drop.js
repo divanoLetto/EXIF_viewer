@@ -33,6 +33,7 @@ Vue.component('drag-drop-area', {
       drag_feedback(){
         this.dragging = true;
       },
+      // give visual feedback for dragleave action
       dragleave_feedback(){
         this.dragging = false;
       }
