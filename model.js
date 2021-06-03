@@ -1,3 +1,8 @@
+/*
+This file contains the base structure of the application,
+keeps track of the uploaded image file and its exif and GPS metadata,
+exposes methods for extracting metadata from the image.
+*/
 var app = new Vue({
   el: '#app',
   data() {
@@ -7,6 +12,7 @@ var app = new Vue({
     }
   },
   methods: {
+    // To convert coordinates into data used to get a link for GoogleMap.
     convertDMStoDD(degrees, minutes, seconds, direction) {
       var dd = degrees + (minutes/60) + (seconds/3600);
       if (direction == "S" || direction == "W") {
@@ -14,6 +20,7 @@ var app = new Vue({
         }
         return dd;
     },
+    // To create the GoogleMap link starting from the exif data.
     add_gps_location(exif_data){
       // Calculate latitude decimal
       var gps_data = this.exifs["GPS Data"];
@@ -31,6 +38,8 @@ var app = new Vue({
       link = "https://www.google.com/maps/search/?api=1&query="+latFinal+","+lonFinal;
       this.exifs["GPS Data"]["Coordinate"] = link;
     },
+    // To upload the image and to extract the exif data from it.
+    // This function is called by other child components that manage the Upload button or the DragAndDrop area.
     upload_image(file){
       let fileType = file.type; //getting selected file type
       let validExtensions = ["image/jpeg", "image/jpg", "image/png"]; //some valid image extensions
@@ -57,10 +66,6 @@ var app = new Vue({
             all_data = {};
             all_data["EXIF Data"] = exif_data_EXIF;
             if (Object.keys(exif_data_GPS).length > 0){
-              // lat = exif_data_GPS["GPSLatitude"];
-              // longi =  exif_data_GPS["GPSLongitude"];
-              // link = "http://www.google.com/maps/place/";
-              // link = link.concat(lat).concat(",").concat(longi);
               all_data["GPS Data"] = exif_data_GPS;
             }
             vm.exifs = all_data; // set EXIF and GPS data
