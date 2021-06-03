@@ -1,7 +1,7 @@
 /*
 This file contains the base structure of the application,
 keeps track of the uploaded image file and its exif and GPS metadata,
-exposes methods for extracting metadata from the image.
+exposes methods for extracting metadata from the image during the upload.
 */
 var app = new Vue({
   el: '#app',
